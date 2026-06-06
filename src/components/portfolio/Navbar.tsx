@@ -29,9 +29,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-300 items-center justify-between px-6">
         <a href="#hero" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground font-bold tracking-tight">
-            OB
-          </span>
+          <img src="/image.png" alt="Og'abek Boymirzayev" className="h-9 w-9 rounded-lg object-cover" />
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
@@ -39,7 +37,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm text-secondary hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {l.label}
               </a>
@@ -71,7 +69,7 @@ export function Navbar() {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-secondary hover:text-foreground hover:bg-secondary transition-colors"
+                  className="block rounded-lg px-3 py-3 text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors"
                 >
                   {l.label}
                 </a>

@@ -40,7 +40,7 @@ export function Contact() {
           <h2 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.05]">
             Let's build something together.
           </h2>
-          <p className="mt-5 text-secondary text-lg">
+          <p className="mt-5 text-lg text-muted-foreground">
             Open to freelance projects and full-time opportunities.
           </p>
         </Reveal>
@@ -58,7 +58,7 @@ export function Contact() {
                   <Icon size={20} />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-sm text-secondary">{label}</div>
+                  <div className="text-sm text-muted-foreground">{label}</div>
                   <div className="font-medium text-foreground truncate">
                     {value}
                   </div>
@@ -69,18 +69,16 @@ export function Contact() {
         </div>
 
         <Reveal delay={300}>
-          <a
-            href="tel:+998940033959"
-            className="mt-10 inline-flex items-center gap-2 text-secondary hover:text-foreground transition-colors"
-          >
-            <Phone size={16} />
-            <span className="font-medium">+998 94 003 39 59</span>
+          <a href="tel:+998940033959" className="text-muted-foreground">
+            <span className="mt-10 inline-flex items-center gap-2 transition-colors hover:text-foreground">
+              <Phone size={16} />
+              <span className="font-medium">+998 94 003 39 59</span>
+            </span>
           </a>
         </Reveal>
 
-        <div className="mt-16 pt-8 border-t border-border text-sm text-secondary">
-          © {new Date().getFullYear()} Og'abek Boymirzayev. Built with React &
-          TailwindCSS.
+        <div className="mt-16 pt-8 border-t border-border text-sm text-muted-foreground">
+          © 2026 Og'abek Boymirzayev. All rights reserved.
         </div>
       </div>
     </section>

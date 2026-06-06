@@ -1,29 +1,25 @@
-import {
-  Server, Lock, Radio, Database, Boxes, Sparkles, FileCode,
-  Atom, Layers, Palette, Component, Layout, Zap, Workflow,
-} from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const backend = [
-  { name: "REST API", Icon: Server },
-  { name: "JWT", Icon: Lock },
-  { name: "WebSocket", Icon: Radio },
-  { name: "Prisma ORM", Icon: Boxes },
-  { name: "PostgreSQL", Icon: Database },
-  { name: "OpenAI API", Icon: Sparkles },
-  { name: "TypeScript", Icon: FileCode },
+  { name: "REST API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg" },
+  { name: "JWT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg" },
+  { name: "WebSocket", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg" },
+  { name: "Prisma ORM", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" },
+  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+  { name: "OpenAI API", icon: "https://cdn.simpleicons.org/openai/000000" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
 ];
 
 const frontend = [
-  { name: "React.js", Icon: Atom },
-  { name: "Next.js", Icon: Layers },
-  { name: "TypeScript", Icon: FileCode },
-  { name: "TailwindCSS", Icon: Palette },
-  { name: "Ant Design", Icon: Component },
-  { name: "shadcn/UI", Icon: Layout },
-  { name: "Redux Toolkit", Icon: Workflow },
-  { name: "Zustand", Icon: Zap },
-  { name: "React Query", Icon: Workflow },
+  { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+  { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+  { name: "Ant Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/antdesign/antdesign-original.svg" },
+  { name: "shadcn/UI", icon: "https://cdn.simpleicons.org/shadcnui/000000" },
+  { name: "Redux Toolkit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" },
+  { name: "Zustand", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg" },
+  { name: "React Query", icon: "https://cdn.simpleicons.org/tanstack" },
 ];
 
 function Group({
@@ -31,23 +27,28 @@ function Group({
   items,
 }: {
   title: string;
-  items: { name: string; Icon: typeof Server }[];
+  items: { name: string; icon: string }[];
 }) {
   return (
     <div>
       <Reveal>
-        <h3 className="text-sm uppercase tracking-[0.2em] text-secondary mb-5">
+        <h3 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-5">
           {title}
         </h3>
       </Reveal>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-        {items.map(({ name, Icon }, i) => (
+        {items.map(({ name, icon }, i) => (
           <Reveal key={name} delay={i * 50}>
-            <div className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-border bg-surface px-4 py-5 transition-all hover:border-primary/60 hover:-translate-y-0.5">
-              <Icon
-                size={24}
-                className="text-secondary group-hover:text-primary transition-colors"
-              />
+            <div className="group flex min-h-33 flex-col items-center justify-center gap-3 rounded-xl border border-border bg-surface px-4 py-5 transition-all hover:-translate-y-0.5 hover:border-primary/60">
+              <div className="grid h-12 w-12 place-items-center rounded-lg border border-border bg-background/60 p-2 transition-colors group-hover:border-primary/60 group-hover:bg-background">
+                <img
+                  src={icon}
+                  alt={`${name} icon`}
+                  className="h-full w-full object-contain"
+                  loading="lazy"
+                  draggable={false}
+                />
+              </div>
               <span className="text-xs text-foreground text-center">{name}</span>
             </div>
           </Reveal>
@@ -60,7 +61,7 @@ function Group({
 export function Stack() {
   return (
     <section id="stack" className="py-24 px-6">
-      <div className="mx-auto max-w-300">
+      <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
             Toolbox

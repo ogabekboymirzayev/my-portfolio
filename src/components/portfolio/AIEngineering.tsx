@@ -25,7 +25,7 @@ const features = [
 export function AIEngineering() {
   return (
     <section id="ai" className="py-24 px-6 bg-surface-2 border-y border-border">
-      <div className="mx-auto max-w-300">
+      <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
             Specialty
@@ -45,7 +45,7 @@ export function AIEngineering() {
                 <h3 className="mt-5 text-lg font-semibold text-foreground">
                   {title}
                 </h3>
-                <p className="mt-2 text-sm text-secondary leading-relaxed">
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {description}
                 </p>
               </div>

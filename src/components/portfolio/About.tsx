@@ -3,20 +3,18 @@ import { Reveal } from "./Reveal";
 const stats = [
   { value: "2+", label: "Client Projects" },
   { value: "3", label: "Cities Served" },
-  { value: "Full-stack", label: "+ AI" },
+  { value: "Full-stack", label: "to AI" },
 ];
 
 export function About() {
   return (
     <section id="about" className="py-24 px-6">
-      <div className="mx-auto max-w-300 grid lg:grid-cols-[260px_1fr] gap-12 items-start">
+      <div className="mx-auto max-w-6xl grid lg:grid-cols-[260px_1fr] gap-12 items-start">
         <Reveal>
           <div className="relative mx-auto lg:mx-0 h-50 w-50">
             <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
             <div className="relative h-full w-full rounded-full border-2 border-primary p-1 shadow-[0_0_30px_-5px_oklch(0.623_0.214_259.815/0.6)]">
-              <div className="grid h-full w-full place-items-center rounded-full bg-linear-to-br from-surface to-background text-5xl font-bold text-foreground">
-                OB
-              </div>
+              <img src="/image.png" alt="Og'abek Boymirzayev" className="h-full w-full rounded-full object-cover" />
             </div>
           </div>
         </Reveal>
@@ -32,7 +30,7 @@ export function About() {
           </Reveal>
 
           <Reveal delay={100}>
-            <p className="mt-5 text-secondary leading-relaxed max-w-2xl">
+            <p className="mt-5 max-w-2xl leading-relaxed text-[black/80]">
               I'm a 3rd-year student at TSUE with hands-on experience building
               real client projects. I work across the full stack — from database
               design to UI — and I integrate AI features using OpenAI API.
@@ -46,7 +44,9 @@ export function About() {
                   <div className="text-2xl font-bold text-foreground">
                     {s.value}
                   </div>
-                  <div className="mt-1 text-sm text-secondary">{s.label}</div>
+                  <div className="mt-1 text-[14px] text-[#a1a1aa]">
+                    {s.label}
+                  </div>
                 </div>
               </Reveal>
             ))}

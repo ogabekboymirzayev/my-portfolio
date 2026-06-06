@@ -12,28 +12,28 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16"
+      className="relative min-h-svh flex items-center justify-center overflow-hidden px-0 py-0"
     >
       {/* dot grid */}
       <div className="absolute inset-0 bg-dot-grid opacity-40 mask-[radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
       {/* glow */}
-      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 h-125 w-175 rounded-full bg-primary/15 blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 h-125 w-175 rounded-full bg-primary/10 blur-[120px]" />
 
-      <div className="relative mx-auto grid max-w-300 w-full grid-cols-1 lg:grid-cols-2 gap-12 px-6 items-center">
+      <div className="relative mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-2 lg:gap-12">
         {/* left */}
         <div>
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1.5 text-xs text-secondary">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1.5 text-xs text-foreground">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
               Available for work
             </div>
           </Reveal>
 
           <Reveal delay={100}>
-            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
+            <h1 className="mt-6 text-4xl font-bold tracking-tight leading-[1.05] sm:text-5xl lg:text-6xl">
               Og'abek <br />
               <span className="bg-linear-to-r from-foreground to-primary bg-clip-text text-transparent">
                 Boymirzayev
@@ -42,13 +42,13 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={200}>
-            <p className="mt-4 text-lg sm:text-xl text-secondary">
+            <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
               Fullstack Developer & AI Engineer
             </p>
           </Reveal>
 
           <Reveal delay={300}>
-            <p className="mt-5 max-w-xl text-secondary leading-relaxed">
+            <p className="mt-5 max-w-xl leading-relaxed text-muted-foreground">
               I build full-stack web apps and integrate AI into real products.
               Based in Tashkent, open to remote.
             </p>
@@ -63,7 +63,8 @@ export function Hero() {
                 View Projects <ArrowRight size={16} />
               </a>
               <a
-                href="#contact"
+                href="/cv.pdf"
+                download="Ogabek_Boymirzayev_CV.pdf"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-transparent px-5 py-3 text-sm font-medium text-foreground hover:bg-surface transition-colors"
               >
                 <Download size={16} /> Download CV
@@ -73,7 +74,7 @@ export function Hero() {
         </div>
 
         {/* right: terminal */}
-        <Reveal delay={200}>
+        <Reveal delay={200} className="hidden lg:block">
           <div className="relative">
             {floatingBadges.map((b) => (
               <span
@@ -85,31 +86,31 @@ export function Hero() {
                   bottom: b.bottom,
                   animationDelay: b.delay,
                 }}
-                className="absolute rounded-full border border-border bg-surface/80 backdrop-blur px-3 py-1 text-xs text-secondary shadow-lg animate-[float_5s_ease-in-out_infinite]"
+                className="absolute rounded-full border border-primary/30 bg-white px-3 py-1 text-xs font-medium text-foreground shadow-md animate-[float_5s_ease-in-out_infinite]"
               >
                 {b.label}
               </span>
             ))}
 
-            <div className="rounded-xl border border-border bg-surface shadow-2xl overflow-hidden">
-              <div className="flex items-center gap-2 border-b border-border px-4 py-3 bg-black/30">
+            <div className="rounded-xl border border-border bg-zinc-900 shadow-2xl overflow-hidden">
+              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 bg-black/40">
                 <span className="h-3 w-3 rounded-full bg-red-500/80" />
                 <span className="h-3 w-3 rounded-full bg-yellow-500/80" />
                 <span className="h-3 w-3 rounded-full bg-green-500/80" />
-                <span className="ml-3 text-xs text-secondary">~/ogabek — zsh</span>
+                <span className="ml-3 text-xs text-zinc-400">~/ogabek — zsh</span>
               </div>
-              <pre className="p-5 text-[13px] leading-relaxed font-mono text-secondary overflow-x-auto">
-{`> whoami
-`}<span className="text-foreground">og'abek boymirzayev</span>{`
+              <pre className="p-5 text-[13px] leading-relaxed font-mono text-zinc-400 overflow-x-auto">
+                {`> whoami
+`}<span className="text-zinc-100">Og'abek boymirzayev</span>{`
 > cat stack.json
-`}<span className="text-foreground">{`{
+`}<span className="text-white">{`{
   "frontend": ["React", "Next.js", "TS"],
   "backend":  ["Node", "Prisma", "Postgres"],
   "ai":       ["OpenAI", "Prompting"]
 }`}</span>{`
 > deploy production
-`}<span className="text-primary">✓ build succeeded</span>{`
-`}<span className="text-primary">✓ live in 8.4s</span>{`
+`}<span className="text-emerald-400">✓ build succeeded</span>{`
+`}<span className="text-emerald-400">✓ live in 8.4s</span>{`
 > _`}
               </pre>
             </div>
