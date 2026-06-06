@@ -27,7 +27,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
+      <nav className="mx-auto flex h-16 max-w-300 items-center justify-between px-6">
         <a href="#hero" className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground font-bold tracking-tight">
             OB
@@ -65,7 +65,7 @@ export function Navbar() {
 
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
-          <ul className="mx-auto flex max-w-[1200px] flex-col px-6 py-4 gap-1">
+          <ul className="mx-auto flex max-w-300 flex-col px-6 py-4 gap-1">
             {links.map((l) => (
               <li key={l.href}>
                 <a

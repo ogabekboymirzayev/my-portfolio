@@ -31,7 +31,7 @@ const links = [
 export function Contact() {
   return (
     <section id="contact" className="relative py-28 px-6 overflow-hidden">
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-primary/10 blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-100 w-150 rounded-full bg-primary/10 blur-[120px]" />
       <div className="relative mx-auto max-w-3xl text-center">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-medium">

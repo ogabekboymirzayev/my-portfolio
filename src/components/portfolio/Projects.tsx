@@ -25,7 +25,7 @@ const projects = [
 export function Projects() {
   return (
     <section id="projects" className="py-24 px-6">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-300">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
             Portfolio
@@ -38,9 +38,9 @@ export function Projects() {
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <Reveal key={p.name} delay={i * 120}>
-              <article className="group rounded-xl border border-border bg-surface overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_20px_60px_-20px_oklch(0.623_0.214_259.815_/_0.4)]">
+              <article className="group overflow-hidden rounded-xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_20px_60px_-20px_oklch(0.623_0.214_259.815/0.4)]">
                 <div
-                  className={`relative aspect-[16/9] bg-gradient-to-br ${p.accent} overflow-hidden`}
+                  className={`relative aspect-video overflow-hidden bg-linear-to-br ${p.accent}`}
                 >
                   <div className="absolute inset-0 bg-dot-grid opacity-30" />
                   <div className="absolute inset-0 grid place-items-center">

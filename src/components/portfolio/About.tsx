@@ -9,12 +9,12 @@ const stats = [
 export function About() {
   return (
     <section id="about" className="py-24 px-6">
-      <div className="mx-auto max-w-[1200px] grid lg:grid-cols-[260px_1fr] gap-12 items-start">
+      <div className="mx-auto max-w-300 grid lg:grid-cols-[260px_1fr] gap-12 items-start">
         <Reveal>
-          <div className="relative mx-auto lg:mx-0 h-[200px] w-[200px]">
+          <div className="relative mx-auto lg:mx-0 h-50 w-50">
             <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
-            <div className="relative h-full w-full rounded-full border-2 border-primary p-1 shadow-[0_0_30px_-5px_oklch(0.623_0.214_259.815_/_0.6)]">
-              <div className="h-full w-full rounded-full bg-gradient-to-br from-surface to-background grid place-items-center text-5xl font-bold text-foreground">
+            <div className="relative h-full w-full rounded-full border-2 border-primary p-1 shadow-[0_0_30px_-5px_oklch(0.623_0.214_259.815/0.6)]">
+              <div className="grid h-full w-full place-items-center rounded-full bg-linear-to-br from-surface to-background text-5xl font-bold text-foreground">
                 OB
               </div>
             </div>

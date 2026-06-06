@@ -60,7 +60,7 @@ function Group({
 export function Stack() {
   return (
     <section id="stack" className="py-24 px-6">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-300">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-medium">
             Toolbox

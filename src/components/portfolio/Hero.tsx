@@ -15,11 +15,11 @@ export function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16"
     >
       {/* dot grid */}
-      <div className="absolute inset-0 bg-dot-grid opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
+      <div className="absolute inset-0 bg-dot-grid opacity-40 mask-[radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
       {/* glow */}
-      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-primary/15 blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 h-125 w-175 rounded-full bg-primary/15 blur-[120px]" />
 
-      <div className="relative mx-auto grid max-w-[1200px] w-full grid-cols-1 lg:grid-cols-2 gap-12 px-6 items-center">
+      <div className="relative mx-auto grid max-w-300 w-full grid-cols-1 lg:grid-cols-2 gap-12 px-6 items-center">
         {/* left */}
         <div>
           <Reveal>
@@ -35,7 +35,7 @@ export function Hero() {
           <Reveal delay={100}>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
               Og'abek <br />
-              <span className="bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-foreground to-primary bg-clip-text text-transparent">
                 Boymirzayev
               </span>
             </h1>
@@ -58,7 +58,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-all hover:translate-y-[-1px]"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-all hover:-translate-y-px"
               >
                 View Projects <ArrowRight size={16} />
               </a>
