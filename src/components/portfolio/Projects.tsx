@@ -10,7 +10,7 @@ const projects = [
     stack: ["Next.js", "TailwindCSS", "TypeScript", "SEO"],
     accent: "from-blue-500/20 to-cyan-500/10",
     image:
-      "../../public/musadoors.png",
+      "musadoors.png",
   },
   {
     name: "Shodlik MChJ",
@@ -20,7 +20,7 @@ const projects = [
     stack: ["Vue.js", "TailwindCSS", "SEO"],
     accent: "from-emerald-500/20 to-blue-500/10",
     image:
-      "../../public/shodlik.png",
+      "shodlik.png",
   },
 ];
 
