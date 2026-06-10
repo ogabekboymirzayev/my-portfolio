@@ -7,7 +7,7 @@ const backend = [
   { name: "Prisma ORM", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" },
   { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
   { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
-  { name: "AI", icon: "https://www.svgrepo.com/show/373424/ai.svg"},
+  { name: "AI", icon: "https://www.svgrepo.com/show/373424/ai.svg" },
 ];
 
 const frontend = [
@@ -22,25 +22,19 @@ const frontend = [
   { name: "React Query", icon: "https://cdn.simpleicons.org/tanstack" },
 ];
 
-function Group({
-  title,
-  items,
-}: {
-  title: string;
-  items: { name: string; icon: string }[];
-}) {
+function Group({ title, items }: { title: string; items: { name: string; icon: string }[] }) {
   return (
     <div>
       <Reveal>
-        <h3 className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-5">
+        <h3 className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-semibold mb-5">
           {title}
         </h3>
       </Reveal>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3">
         {items.map(({ name, icon }, i) => (
           <Reveal key={name} delay={i * 50}>
-            <div className="group flex min-h-33 flex-col items-center justify-center gap-3 rounded-xl border border-border bg-surface px-4 py-5 transition-all hover:-translate-y-0.5 hover:border-primary/60">
-              <div className="grid h-12 w-12 place-items-center rounded-lg border border-border bg-background/60 p-2 transition-colors group-hover:border-primary/60 group-hover:bg-background">
+            <div className="group flex flex-col items-center justify-center gap-3 rounded-xl border border-border bg-surface px-3 py-5 transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:bg-surface/70 cursor-default">
+              <div className="grid h-10 w-10 place-items-center rounded-lg border border-border bg-background/60 p-2 transition-colors group-hover:border-primary/60 group-hover:bg-background">
                 <img
                   src={icon}
                   alt={`${name} icon`}
@@ -49,7 +43,9 @@ function Group({
                   draggable={false}
                 />
               </div>
-              <span className="text-xs text-foreground text-center">{name}</span>
+              <span className="text-[11px] text-muted-foreground group-hover:text-foreground text-center leading-tight transition-colors">
+                {name}
+              </span>
             </div>
           </Reveal>
         ))}
@@ -69,11 +65,14 @@ export function Stack() {
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
             Technologies
           </h2>
+          <p className="mt-4 max-w-xl text-muted-foreground leading-relaxed">
+            Tools and frameworks I use to build modern, scalable products.
+          </p>
         </Reveal>
 
-        <div className="mt-12 space-y-12">
-          <Group title="Backend" items={backend} />
-          <Group title="Frontend" items={frontend} />
+        <div className="mt-12 space-y-10">
+          <Group title="Backend & Infrastructure" items={backend} />
+          <Group title="Frontend & UI" items={frontend} />
         </div>
       </div>
     </section>
